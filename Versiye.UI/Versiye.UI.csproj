@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -66,6 +69,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +82,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veresiye.Data\Veresiye.Data.csproj">
+      <Project>{fd5ecb42-17d8-4413-bbac-09211e0a8da5}</Project>
+      <Name>Veresiye.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veresiye.Model\Veresiye.Model.csproj">
+      <Project>{82153ef0-de6f-4075-884b-f99b55bd07a1}</Project>
+      <Name>Veresiye.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veresiye.Service\Veresiye.Service.csproj">
+      <Project>{ff10f299-62bb-442d-bc69-2a3506f0a2f1}</Project>
+      <Name>Veresiye.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

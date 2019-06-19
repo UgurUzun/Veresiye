@@ -32,12 +32,7 @@ namespace Versiye.UI
             //Formlarımız
             builder.RegisterType<FrmMain>().As<FrmMain>();
 
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
-
-            var container = builder.Build();
+            var container = builder.Build();     
 
             using (var scope = container.BeginLifetimeScope())
             {
